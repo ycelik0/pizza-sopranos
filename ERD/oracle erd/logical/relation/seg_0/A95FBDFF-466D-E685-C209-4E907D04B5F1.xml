@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Pizza Category FK" directorySegmentName="seg_0" id="A95FBDFF-466D-E685-C209-4E907D04B5F1">
+<createdBy>yc569</createdBy>
+<createdTime>2022-11-08 15:42:31 UTC</createdTime>
+<ownerDesignName>oracle erd</ownerDesignName>
+<engineerTo>
+<item key="F5723609-F6FD-D601-6B01-B0E95ADE30BB" value="true"/>
+</engineerTo>
+<sourcePk>7013A5D3-29D2-75BF-BC47-7EC3263FD40E</sourcePk>
+<targetPk>B7289348-4DE9-62E9-9693-760FCE8D44C1</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>5D83209D-9389-79C3-4747-CF6113365B4C</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>E7088540-3A87-CB26-A96E-3E4F44CECCFB</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="433B9483-3508-D622-3FB4-B99E9E8E7E54" name="User">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>C8334D35-5C69-13FE-5E29-C4BF692CD2A6</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="5D4561B8-82E6-B482-D6EE-4FE4CB0A2D59">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>F2AB003E-39E6-840D-1A8A-37A7B4341DD1</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="2BD3837D-294B-4CFD-EF85-AB24DA7766C9">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>F16F7346-AE9E-C6C1-7053-F3C2F7A735D1</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="roles" id="DB11810D-2905-F955-92C8-A04A31E131CF">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>09802510-D279-F75B-1CCA-2600984E60A7</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>47823B89-BECE-2D4A-B641-EE3BE6149078</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="password" id="CBE53A7A-83B9-A8B6-F9A6-F7E4161B5283">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>1F83F958-676B-49C1-315E-0FD662D72AAF</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="firstname" id="6BB5119D-4C47-5569-9705-2DDCA7B877C6">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>CC90F32E-A701-4E26-6C72-EA243AC16185</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lastname" id="AACD0886-75A5-E7BD-655A-5E08CE2E115B">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>70D2B0B8-154B-6328-7BC3-7264016B8C78</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Shoppingcart_pizza_id" id="EF55E3A8-FF9A-F47F-36EE-FCA5656B5843">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>EAE3967D-A5EB-393F-49E6-2929E5657D3D</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="012C9CF4-E0EE-C4C2-4861-10CBE0935A9A" referredColumn="AA066180-E694-7D66-F848-3C75D2FCAB4B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="158D35C1-AE1E-C9E3-0820-CC2AD05AE821" name="User_PK">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>84721987-09CB-2726-ADA9-1BF7BB8376F4</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D4561B8-82E6-B482-D6EE-4FE4CB0A2D59"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F1CC2C0C-B993-3E39-63F1-57C49DE5D9BE" name="User__IDX">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<ownerDesignName>oracle erd</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>72712EEC-43E6-28F1-AB1E-B7101B72E830</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="EF55E3A8-FF9A-F47F-36EE-FCA5656B5843"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="662C7BC4-731E-CB59-6FE1-D8F469629748" name="User_Shoppingcart_pizza_FK">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>72712EEC-43E6-28F1-AB1E-B7101B72E830</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EF55E3A8-FF9A-F47F-36EE-FCA5656B5843"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

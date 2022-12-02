@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} | Order Status{% endblock %}
+
+{% block content %}
+    {% if app.user %}
+        {% if 'ROLE_ADMIN' in app.user.roles %}
+            <div class="container">
+                {% for order in orders %}
+                    <div class="live-order col-12 row bg-dark p-3 my-1">
+                        <h4 class="col-12 col-md-6">Order ID: {{ order.id }}</h4>
+                        <div class="status text-white col-12 col-md-6 align-self-center text-md-right">
+                            <a href="{{ path('app_change_order_status', { id: order.id }) }}"
+                               class="border border-{% if (order.orderstatus == 'prepared') or (order.orderstatus == 'delivery') %}primary{% elseif order.orderstatus == 'done' %}success{% endif %} rounded p-2 text-white">
+                                Status: {{ order.orderStatus|capitalize }}
+                            </a>
+                        </div>
+                        <div class="text-white col-12">Naam: {{ order.user.firstName }} {{ order.user.lastName }}</div>
+                        <h6 class="col-12 text-white">Pizzas:</h6>
+                        <div class="pizza-container text-white col-12">
+                            {% for i in 0 .. (order.shoppingcart|length - 1) %}
+                                {% set cartItems = order.shoppingcart[i] %}
+                                <div class="item mx-5 my-2">
+                                    <img class="img-fluid order-img" src="/assets/images/{{ cartItems.pizza.image }}"
+                                         alt="{{ cartItems.pizza.name }}">
+                                    {{ cartItems.amount }}x {{ cartItems.pizza.name }}
+                                    {% if cartItems.calzone %}(calzone){% else %}{% endif %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="adress-container col-12">
+                            <div class="streetNumber text-white">
+                                Adress: {{ order.adress.streetName }} {{ order.adress.streetNumber }}{{ order.adress.addition }} {{ order.adress.postalCode }}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="container row mx-auto py-5 d-flex justify-content-center">
+                <div class="col-12 text-center"><h1>The page you’re looking for can’t be found.</h1></div>
+                <div class="col-12 text-center"><p>Go back to the <a href="/">Homepage</a></p></div>
+            </div>
+        {% endif %}
+    {% else %}
+        <div class="container row mx-auto py-5 d-flex justify-content-center">
+            <div class="col-12 text-center"><h1>The page you’re looking for can’t be found.</h1></div>
+            <div class="col-12 text-center"><p>Go back to the <a href="/">Homepage</a></p></div>
+        </div>
+    {% endif %}
+{% endblock %}
+

@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} | Profile{% endblock %}
+
+{% block content %}
+    <div class="container py-5">
+        {% for message in app.flashes('orderMessage') %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+        <h1>Hallo {{ user.firstName }} {{ user.lastName }}</h1>
+        <div class="my-5">
+            <h2>Live Orders</h2>
+            <div class="live-order-container row rounded">
+                {% for order in orders %}
+                    {% if (order.orderStatus == 'prepared') or (order.orderStatus == 'delivery') %}
+                        <div class="live-order col-12 row bg-dark p-3 my-1">
+                            <h4 class="col-12 col-md-6">Order ID: {{ order.id }}</h4>
+                            <div class="status text-white col-12 col-md-6 align-self-center text-md-right">
+                                <span class="border border-primary text-white rounded p-2">Status: {{ order.orderStatus|capitalize }}</span>
+                            </div>
+                            <h6 class="col-12 text-white">Pizzas:</h6>
+                            <div class="pizza-container text-white col-12">
+                                {% for i in 0 .. (order.shoppingcart|length - 1) %}
+                                    {% set cartItems = order.shoppingcart[i] %}
+                                    <div class="item mx-5 my-2">
+                                        <img class="img-fluid order-img" src="assets/images/{{ cartItems.pizza.image }}"
+                                             alt="{{ cartItems.pizza.name }}">
+                                        {{ cartItems.amount }}x {{ cartItems.pizza.name }}
+                                        {% if cartItems.calzone %}(calzone){% else %}{% endif %}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="adress-container col-12">
+                                <div class="streetNumber text-white">
+                                    Adress: {{ order.adress.streetName }} {{ order.adress.streetNumber }}{{ order.adress.addition }} {{ order.adress.postalCode }}</div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="mt-5">
+            <h2>Past Orders</h2>
+            <div class="live-order-container row rounded">
+                {% for order in orders %}
+                    {% if order.orderStatus == 'done' %}
+                        <div class="live-order col-12 row bg-dark p-3 my-1">
+                            <h4 class="col-12 col-md-6">Order ID: {{ order.id }}</h4>
+                            <div class="status text-white col-12 col-md-6 align-self-center text-md-right">
+                                <span class="border border-success text-white rounded p-2">Status: {{ order.orderStatus }}</span>
+                            </div>
+                            <h6 class="col-12 text-white">Pizzas:</h6>
+                            <div class="pizza-container text-white col-12">
+                                {% for i in 0 .. (order.shoppingcart|length - 1) %}
+                                    {% set cartItems = order.shoppingcart[i] %}
+                                    <div class="item mx-5 my-2">
+                                        <img class="img-fluid order-img" src="assets/images/{{ cartItems.pizza.image }}"
+                                             alt="{{ cartItems.pizza.name }}">
+                                        {{ cartItems.amount }}x {{ cartItems.pizza.name }}
+                                        {% if cartItems.calzone %}(calzone){% else %}{% endif %}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="adress-container col-12">
+                                <div class="streetNumber text-white">
+                                    Adress: {{ order.adress.streetName }} {{ order.adress.streetNumber }}{{ order.adress.addition }} {{ order.adress.postalCode }}</div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

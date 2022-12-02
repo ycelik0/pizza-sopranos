@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ parent() }} | Checkout{% endblock %}
+{% block content %}
+    {% if app.user %}
+        {% if dataShoppingcart != [] %}
+            <div class="container-fluid row justify-content-center">
+                <div class="col-12 col-lg-6 ms-auto">
+                    {{ form(form) }}
+                </div>
+                <div class="col-12 col-lg-6 me-auto shoppingcart py-5">
+                    <h1 class="text-center mt-5">Shoppingcart</h1>
+                    <h5>Items:</h5>
+                    <div class="shoppingcart-items py-3 ">
+                        {% for data in dataShoppingcart %}
+                            <div class="shoppingcart-item d-flex justify-content-between">
+                                <p class="text-white pl-3">- {{ data.amount }}
+                                    x {{ data.pizza.name }} {% if data.calzone == true %}(Calzone){% else %} {% endif %}
+                                    - €{{ data.pizza.price }}
+                                </p>
+                                <span class="item-price text-white">
+                                    <a href="{{ path('app_order_delete', {id : data.id }) }}">
+                                        <svg class="align-middle svg-trash" xmlns="http://www.w3.org/2000/svg"
+                                             width="15px" viewBox="0 0 448 512">
+                                            <path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"/>
+                                        </svg>
+                                    </a>
+                                </span>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="total-price pl-5 d-flex justify-content-end text-white">Total: €{{ totalPrice }}</div>
+                </div>
+            </div>
+        {% else %}
+            <div class="container text-center text-white p-5"><h1>Go put something in your Shopping Cart!</h1></div>
+        {% endif %}
+    {% else %}
+        <div class="alert alert-danger container my-5">You need to be <a href="{{ path('app_login') }}">logged In</a> to
+            order
+        </div>
+    {% endif %}
+{% endblock %}

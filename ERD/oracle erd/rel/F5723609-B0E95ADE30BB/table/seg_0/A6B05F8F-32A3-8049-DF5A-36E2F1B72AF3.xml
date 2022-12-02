@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A6B05F8F-32A3-8049-DF5A-36E2F1B72AF3" name="Orders">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>A56AE04F-471D-5EA8-CCA3-CD48E91233C6</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="44FB1721-6753-DA58-F516-BCAFD909AAA4">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>C263C2DA-DCE6-0CEE-C247-F64096A85822</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="shoppingcart" id="EAD57CBB-C7AF-1097-4E57-E76C9752E13D">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>1437520E-6452-1BBB-3D38-02DE7588B328</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>47823B89-BECE-2D4A-B641-EE3BE6149078</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="adress" id="4224531E-1E8E-26E3-C719-A97F7BC46E30">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>D9706D91-3168-FD45-2E25-69CDCC0A43AE</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>47823B89-BECE-2D4A-B641-EE3BE6149078</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_status" id="662954B2-D7EE-6DCB-9C5D-1F299B3192AD">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>C994AA82-8A7D-5E27-A42B-59C25AD83729</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="User_id" id="4E3616D4-BAD2-494C-07B5-2EAA607A1068">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>58852642-03AF-C113-7F6F-118D3063396E</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2697BFE9-3CFA-3F2D-1C3A-D43773E323D1" referredColumn="5D4561B8-82E6-B482-D6EE-4FE4CB0A2D59"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F26A3B85-DF5F-8D01-BF11-E23B1898B8BC" name="Orders_PK">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>5684AA8A-6BD9-CD3A-9DC8-6B887CBE8A7E</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="44FB1721-6753-DA58-F516-BCAFD909AAA4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E9AE6672-7FEA-295B-87C3-9C2D91791DD3" name="Orders_User_FK">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>96518513-0A84-B26E-E2E8-40563C4A3BEB</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4E3616D4-BAD2-494C-07B5-2EAA607A1068"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

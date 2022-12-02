@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ parent() }} | Menu{% endblock %}
+{% block content %}
+    <section class="home-slider owl-carousel img"
+             style="background-image: url({{ asset('./assets/images/bg_1.jpg') }});">
+        <div class="slider-item" style="background-image: url({{ asset('./assets/images/bg_3.jpg') }});">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slider-text justify-content-center align-items-center">
+                    <div class="col-md-7 col-sm-12 text-center ftco-animate">
+                        <h1 class="mb-3 mt-5 bread">Our Menu</h1>
+                        <p class="breadcrumbs"><span class="mr-2"><a href="{{ path('app_homepage') }}">Home</a></span> <span>Menu</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 heading-section ftco-animate text-center">
+                    <h2 class="mb-4">Our Menu</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live the blind texts.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-wrap">
+            <div class="container mb-5 d-flex justify-content-center">
+                <button class="btn btn-primary rounded">
+                    <h2 class="text-center m-0"><a class="text-white" href="{{ path('app_order', { id: 1 }) }}">Lets Order!</a></h2>
+                </button>
+            </div>
+            <div class="row no-gutters d-flex">
+                {% for data in dataPizzas %}
+                    <div class="col-lg-4 d-flex ftco-animate">
+                        <div class="services-wrap d-flex">
+                            <div class="img"
+                               style="background-image: url('assets/images/{{ data.image }}');"></div>
+                            <div class="text p-4">
+                                <h3>{{ data.name }}</h3>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                    Consonantia </p>
+                                <p class="price">
+                                    <span>${{ data.price }}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3 mt-5 pt-5">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h2 class="mb-4">Our Menu Pricing</h2>
+                    <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+                    <p class="mt-5">Eat all our top quality pizzas here at sopranos!</p>
+                </div>
+            </div>
+            <div class="row">
+                {% for data in dataPizzas %}
+                    <div class="col-md-6">
+                        <div class="pricing-entry d-flex ftco-animate">
+                            <div class="img"
+                                 style="background-image: url('assets/images/{{ data.image }}');"></div>
+                            <div class="desc pl-3">
+                                <div class="d-flex text align-items-center">
+                                    <h3><span>{{ data.name }}</span></h3>
+                                    <span class="price">€{{ data.price }}</span>
+                                </div>
+                                <div class="pizza-description">Eat Our Delicious {{ data.name }}!</div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="add-to-cart-section" class="ftco-menu">
+        <div class="container-fluid">
+            <div class="row d-md-flex">
+                <div class="col-lg-4 ftco-animate img f-menu-img mb-5 mb-md-0"
+                     style="background-image: url({{ asset('./assets/images/about.jpg') }});">
+                </div>
+                <div class="col-lg-8 ftco-animate p-md-5">
+                    <div class="row">
+                        <div class="col-md-12 nav-link-wrap mb-5">
+                            <div class="nav ftco-animate nav-pills" id="v-pills-tab" role="tablist"
+                                 aria-orientation="vertical">
+                                {% for data in dataCategory %}
+                                    <a class="nav-link {% if data.id == 1 %}active{% endif %}"
+                                       id="v-pills-{{ data.id }}-tab" data-toggle="pill" href="#v-pills-{{ data.id }}"
+                                       role="tab" aria-controls="v-pills-{{ data.id }}"
+                                       aria-selected="true">{{ data.name }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-md-12 d-flex align-items-center">
+
+                            <div class="tab-content ftco-animate" id="v-pills-tabContent">
+                                {% for data in dataCategory %}
+                                    <div class="tab-pane fade {% if data.id == 1 %}show active{% endif %}"
+                                         id="v-pills-{{ data.id }}" role="tabpanel"
+                                         aria-labelledby="v-pills-{{ data.id }}-tab">
+                                        <div class="row">
+                                            {% for data in dataPizzas %}
+                                                <div class="col-md-4 text-center pizza-category-item pizza-category-{{ data.category.id }}">
+                                                    <div class="menu-wrap">
+                                                        <div class="menu-img img mb-4"
+                                                             style="background-image: url('assets/images/{{ data.image }}');"></div>
+                                                        <div class="text">
+                                                            <h3>{{ data.name }}</h3>
+                                                            <p>Eat Our Delicious {{ data.name }}!</p>
+                                                            <p class="price"><span>€{{ data.price }}</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

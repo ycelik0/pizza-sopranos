@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="5F04996F-DE83-C3AD-D225-A988516662DF" containerWithKeyObject="FD27B93F-4DA3-D03A-A1AF-03D9D08A65E6" localFKIndex="17ED1548-49BF-1F9E-1D85-7F97EA92DD0B" name="Pizza_Category_FK">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>A95FBDFF-466D-E685-C209-4E907D04B5F1</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<referredTableLongName>Category</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>73040FA5-9656-8B96-96F1-F4ED343E5824</referredTableID>
+<keyObject>241D1596-AB46-8EAD-5066-621EC5E5C69F</keyObject>
+<referredKeyID>241D1596-AB46-8EAD-5066-621EC5E5C69F</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FD27B93F-4DA3-D03A-A1AF-03D9D08A65E6" name="Pizza">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>5D83209D-9389-79C3-4747-CF6113365B4C</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="6DB986A8-639F-6034-DD38-1C6DFDFE53C2">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>EF866A38-D367-1CA9-082C-8D0FB024BFFE</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="6B051CE2-8C34-D001-521C-A50829149757">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>B4D60440-49F1-1548-3596-84CEAC979701</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="price" id="CCE13FCB-ACC9-03BD-2DFB-9ADB3746DF74">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>AF7B5554-8C2F-80A4-35DE-9F5DCDC6BC88</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="image" id="F054834A-1A6B-FAB4-FF02-3DA2BC6D0790">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>1C564584-B5FF-5DD5-4227-B0A6333C8C36</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Shoppingcart_pizza_id" id="5223BB20-5D6D-5853-663D-F0E4FDB693FF">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>97B2955F-1029-0CE1-C687-A70DFC10E857</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9236ADCB-4D1A-ED41-B3C4-DC4E03DA7AA7" referredColumn="AA066180-E694-7D66-F848-3C75D2FCAB4B"/>
+</associations>
+</Column>
+<Column name="Category_id" id="3B550FD7-0AFD-21B8-7C34-70DA469E133A">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>21293EBF-4221-3591-8245-88AD4BDC63E6</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5F04996F-DE83-C3AD-D225-A988516662DF" referredColumn="8E89249E-6709-078D-840D-7F95D87799AD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1B345012-0BCD-6FDF-CDDA-9F02799F93D0" name="Pizza_PK">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>7013A5D3-29D2-75BF-BC47-7EC3263FD40E</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6DB986A8-639F-6034-DD38-1C6DFDFE53C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5E794C2A-0EB5-CF69-2708-E52D0F262FFC" name="Pizza_Shoppingcart_pizza_FK">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>0D447671-CDCE-CBF6-0931-D4252051929E</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5223BB20-5D6D-5853-663D-F0E4FDB693FF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="17ED1548-49BF-1F9E-1D85-7F97EA92DD0B" name="Pizza_Category_FK">
+<createdBy>SD Student</createdBy>
+<createdTime>2022-11-17 11:35:21 UTC</createdTime>
+<generatorID>A95FBDFF-466D-E685-C209-4E907D04B5F1</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3B550FD7-0AFD-21B8-7C34-70DA469E133A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

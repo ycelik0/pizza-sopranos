@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ parent() }} | Order{% endblock %}
+{% block content %}
+    {% if app.user %}
+        <section id="add-to-cart-section" class="ftco-menu">
+            <div class="container-fluid">
+                <div class="row d-md-flex">
+                    <div class="col-xl-9 ftco-animate p-md-5">
+                        <div class="nav ftco-animate nav-pills p-3" id="v-pills-tab" role="tablist"
+                             aria-orientation="vertical">
+                            {% for data in dataCategory %}
+                                <a href="{{ path('app_order', { id: data.id }) }}" class="nav-link">{{ data.name }}</a>
+                            {% endfor %}
+                        </div>
+                        <div class="tab-content ftco-animate d-flex flex-wrap" id="v-pills-tabContent">
+                            {% for data in dataPizzas %}
+                                <div class="col-12 col-md-6 col-lg-3 text-center pizza-category-item"
+                                     data-pizza-id="{{ data.category.id }}">
+                                    <div class="menu-wrap">
+                                        <div class="menu-img img mb-4"
+                                             style="background-image: url('/assets/images/{{ data.image }}');"></div>
+                                        <div class="text">
+                                            <h3>{{ data.name }}</h3>
+                                            <p class="m-0">Eat Our Delicious {{ data.name }}!</p>
+                                            {% if data.id == 14 %}
+                                                <p class="p-0 m-0">
+                                                    <s class="text-center d-flex align-content-center justify-content-center">
+                                                        <small class="text-danger">€1,400</small>
+                                                    </s>
+                                                </p>
+                                            {% endif %}
+                                            <p class="price"><span>€{{ data.price }}</span></p>
+                                            <p>
+                                                <a class="btn btn-primary"
+                                                   href="{{ path('app_pizza_order', { id: data.id }) }}">Add to cart</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="shoppingcart py-5 container-fluid sticky-top">
+                            <h1 class="text-center mt-5">Shoppingcart</h1>
+                            <h5>Items:</h5>
+                            <div class="shoppingcart-items py-3 ">
+                                {% for data in dataShoppingcart %}
+                                    <div class="shoppingcart-item d-flex justify-content-between">
+                                        <p class="text-white pl-3">- {{ data.amount }}
+                                            x {{ data.pizza.name }} {% if data.calzone == true %}(Calzone){% else %} {% endif %}
+                                            - €{{ data.pizza.price }}
+                                        </p>
+                                        <span class="item-price text-white">
+                                            <a href="{{ path('app_order_delete', {id : data.id }) }}">
+                                            <svg class="align-middle svg-trash" xmlns="http://www.w3.org/2000/svg"
+                                                 width="15px" viewBox="0 0 448 512"><path
+                                                        d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"/></svg>
+                                            </a>
+                                        </span>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="total-price pl-5 d-flex justify-content-end text-white">Total:
+                                €{{ totalPrice }}</div>
+                            <a class="btn btn-primary text-white w-100 mt-3 p-2 rounded font-weight-bold {% if dataShoppingcart == [] %}disabled {% else %}{% endif %}"
+                               href="{{ path('app_order_pay') }}">Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% else %}
+        <div class="alert alert-danger container my-5 text-dark">You need to be <a href="{{ path('app_login') }}">logged
+                In</a> to
+            order
+        </div>
+    {% endif %}
+{% endblock %}

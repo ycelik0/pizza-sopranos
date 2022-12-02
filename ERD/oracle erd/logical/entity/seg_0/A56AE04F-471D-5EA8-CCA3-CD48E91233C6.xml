@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A56AE04F-471D-5EA8-CCA3-CD48E91233C6" name="Orders">
+<createdBy>yc569</createdBy>
+<createdTime>2022-10-20 14:55:31 UTC</createdTime>
+<ownerDesignName>oracle erd</ownerDesignName>
+<engineerTo>
+<item key="F5723609-F6FD-D601-6B01-B0E95ADE30BB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="C263C2DA-DCE6-0CEE-C247-F64096A85822">
+<createdBy>yc569</createdBy>
+<createdTime>2022-10-20 14:55:44 UTC</createdTime>
+<ownerDesignName>oracle erd</ownerDesignName>
+<engineerTo>
+<item key="F5723609-F6FD-D601-6B01-B0E95ADE30BB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="shoppingcart" id="1437520E-6452-1BBB-3D38-02DE7588B328">
+<createdBy>yc569</createdBy>
+<createdTime>2022-10-20 14:57:00 UTC</createdTime>
+<ownerDesignName>oracle erd</ownerDesignName>
+<engineerTo>
+<item key="F5723609-F6FD-D601-6B01-B0E95ADE30BB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>47823B89-BECE-2D4A-B641-EE3BE6149078</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="adress" id="D9706D91-3168-FD45-2E25-69CDCC0A43AE">
+<createdBy>yc569</createdBy>
+<createdTime>2022-10-20 14:57:01 UTC</createdTime>
+<ownerDesignName>oracle erd</ownerDesignName>
+<engineerTo>
+<item key="F5723609-F6FD-D601-6B01-B0E95ADE30BB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>47823B89-BECE-2D4A-B641-EE3BE6149078</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="user status" id="C994AA82-8A7D-5E27-A42B-59C25AD83729">
+<createdBy>yc569</createdBy>
+<createdTime>2022-10-20 14:57:02 UTC</createdTime>
+<ownerDesignName>oracle erd</ownerDesignName>
+<engineerTo>
+<item key="F5723609-F6FD-D601-6B01-B0E95ADE30BB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="User id" id="58852642-03AF-C113-7F6F-118D3063396E">
+<createdBy>yc569</createdBy>
+<createdTime>2022-11-08 15:42:12 UTC</createdTime>
+<generatorID>96518513-0A84-B26E-E2E8-40563C4A3BEB</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<engineerTo>
+<item key="F5723609-F6FD-D601-6B01-B0E95ADE30BB" value="true"/>
+</engineerTo>
+<referedAttribute>F2AB003E-39E6-840D-1A8A-37A7B4341DD1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5684AA8A-6BD9-CD3A-9DC8-6B887CBE8A7E" name="Orders_PK">
+<createdBy>yc569</createdBy>
+<createdTime>2022-10-20 14:55:59 UTC</createdTime>
+<ownerDesignName>oracle erd</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="F5723609-F6FD-D601-6B01-B0E95ADE30BB" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C263C2DA-DCE6-0CEE-C247-F64096A85822</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

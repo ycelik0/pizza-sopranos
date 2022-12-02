@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} | Dashboard{% endblock %}
+
+{% block content %}
+    {% if app.user %}
+        {% if 'ROLE_ADMIN' in app.user.roles %}
+            <section class="container my-5">
+                <div class="admin-table-div mx-auto">
+                    <h1>Pizza's</h1>
+                    <a class="add-pizza btn mt-2" href="{{ path('app_add_pizza') }}">Add Pizza</a>
+                    <a class="add-pizza btn mt-2" href="{{ path('app_order_status') }}">Order Status</a>
+                    <table class="admin-table m-0">
+                        <thead>
+                        <tr>
+                            <td class="py-2 px-5 text-center">
+                                Id
+                            </td>
+                            <td class="py-2 px-5 text-center">
+                                Name
+                            </td>
+                            <td class="py-2 px-5 text-center">
+                                Category
+                            </td>
+                            <td class="py-2 px-5 text-center">
+                                Price
+                            </td>
+                            <td class="py-2 px-5 text-center">
+                                Edit
+                            </td>
+                            <td class="py-2 px-5 text-center">
+                                Delete
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for data in allData %}
+                            <tr>
+                                <td class="py-2 px-5 text-center">
+                                    {{ data.id }}
+                                </td>
+                                <td class="py-2 px-5 text-center">
+                                    {{ data.name }}
+                                </td>
+                                <td class="py-2 px-5 text-center">
+                                    {{ data.category.name }}
+                                </td>
+                                <td class="py-2 px-5 text-center">
+                                    {{ data.price }}
+                                </td>
+                                <td class="py-2 px-5 text-center">
+                                    <a class="edit-btn" href="/admin/dashboard/edit/pizza/{{ data.id }}">&#9998</a>
+                                </td>
+                                <td class="py-2 px-5 text-center">
+                                    <a class="delete-btn" href="/admin/dashboard/delete/pizza/{{ data.id }}">
+                                        &#128465</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        {% else %}
+            <div class="container row mx-auto py-5 d-flex justify-content-center">
+                <div class="col-12 text-center"><h1>The page you’re looking for can’t be found.</h1></div>
+                <div class="col-12 text-center"><p>Go back to the <a href="/">Homepage</a></p></div>
+            </div>
+        {% endif %}
+    {% else %}
+        <div class="container row mx-auto py-5 d-flex justify-content-center">
+            <div class="col-12 text-center"><h1>The page you’re looking for can’t be found.</h1></div>
+            <div class="col-12 text-center"><p>Go back to the <a href="/">Homepage</a></p></div>
+        </div>
+    {% endif %}
+{% endblock %}
+

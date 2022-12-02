@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block extrajavascript %}
+    <script src="{{ asset('assets/js/order.js') }}" defer></script>
+{% endblock %}
+{% block title %}{{ parent() }} | Pizza Order{% endblock %}
+{% block content %}
+    {% if app.user %}
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    {{ form(form) }}
+                </div>
+                <div class="col-12 col-lg-6 p-5">
+                    <img class="img-fluid" src="/assets/images/{{ dataPizza.image }}" alt="{{ dataPizza.name }}">
+                </div>
+            </div>
+        </section>
+    {% else %}
+        <div class="alert alert-danger container my-5">You need to be <a href="{{ path('app_login') }}">logged In</a> to
+            order
+        </div>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5D83209D-9389-79C3-4747-CF6113365B4C" name="Pizza">
+<createdBy>yc569</createdBy>
+<createdTime>2022-10-20 14:52:16 UTC</createdTime>
+<ownerDesignName>oracle erd</ownerDesignName>
+<engineerTo>
+<item key="F5723609-F6FD-D601-6B01-B0E95ADE30BB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="EF866A38-D367-1CA9-082C-8D0FB024BFFE">
+<createdBy>yc569</createdBy>
+<createdTime>2022-10-20 14:52:27 UTC</createdTime>
+<ownerDesignName>oracle erd</ownerDesignName>
+<engineerTo>
+<item key="F5723609-F6FD-D601-6B01-B0E95ADE30BB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="B4D60440-49F1-1548-3596-84CEAC979701">
+<createdBy>yc569</createdBy>
+<createdTime>2022-10-20 14:52:39 UTC</createdTime>
+<ownerDesignName>oracle erd</ownerDesignName>
+<engineerTo>
+<item key="F5723609-F6FD-D601-6B01-B0E95ADE30BB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="price" id="AF7B5554-8C2F-80A4-35DE-9F5DCDC6BC88">
+<createdBy>yc569</createdBy>
+<createdTime>2022-10-20 14:52:46 UTC</createdTime>
+<ownerDesignName>oracle erd</ownerDesignName>
+<engineerTo>
+<item key="F5723609-F6FD-D601-6B01-B0E95ADE30BB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="image" id="1C564584-B5FF-5DD5-4227-B0A6333C8C36">
+<createdBy>yc569</createdBy>
+<createdTime>2022-10-20 14:53:01 UTC</createdTime>
+<ownerDesignName>oracle erd</ownerDesignName>
+<engineerTo>
+<item key="F5723609-F6FD-D601-6B01-B0E95ADE30BB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Shoppingcart pizza id" id="97B2955F-1029-0CE1-C687-A70DFC10E857">
+<createdBy>yc569</createdBy>
+<createdTime>2022-11-08 15:42:27 UTC</createdTime>
+<generatorID>0D447671-CDCE-CBF6-0931-D4252051929E</generatorID>
+<ownerDesignName>oracle erd</ownerDesignName>
+<engineerTo>
+<item key="F5723609-F6FD-D601-6B01-B0E95ADE30BB" value="true"/>
+</engineerTo>
+<referedAttribute>D71CD0D2-C5E0-C9C3-FFB7-149A6CC1C3F3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7013A5D3-29D2-75BF-BC47-7EC3263FD40E" name="Pizza_PK">
+<createdBy>yc569</createdBy>
+<createdTime>2022-10-20 14:52:35 UTC</createdTime>
+<ownerDesignName>oracle erd</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="F5723609-F6FD-D601-6B01-B0E95ADE30BB" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EF866A38-D367-1CA9-082C-8D0FB024BFFE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
